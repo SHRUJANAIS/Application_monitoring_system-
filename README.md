@@ -1,6 +1,6 @@
 # Application_monitoring_system-
 The Log Analytics Platform is designed to collect, process, and visualize log data in real-time. It leverages Grafana for visualization, Kafka for real-time log ingestion, and a relational database for storage.
-<img width="797" height="409" alt="image" src="https://github.com/user-attachments/assets/4babcbd0-6fdb-444e-8179-e51c7ffa3b63" />
+<img width="797" height="409" alt="image" src="https://github.com/user-attachments/assets/4babcbd0-6fdb-444e-8179-e51c7ffa3b63" />  
 Running the Project
 Start all the containers
 sudo sudo docker-compose down
@@ -15,7 +15,7 @@ python workload/simulate.py
 
 Setup Grafana: http://localhost:3000/ (Login: admin / admin)
 Connect to mysql data source with following credentials
- <pre><code>Host: db:3306
+  <pre><code>Host: db:3306
  User: root
  Password: rootpass
  Database: logs</code></pre>
