@@ -15,19 +15,19 @@ python workload/simulate.py
 
 Setup Grafana: http://localhost:3000/ (Login: admin / admin)
 Connect to mysql data source with following credentials
- Host: db:3306
+ `Host: db:3306
  User: root
  Password: rootpass
- Database: logs
+ Database: logs`
 Create Grafana dashboards with respective queries
 Request Count Per Endpoint:
-SELECT endpoint, COUNT(*) as count FROM logs GROUP BY endpoint;
+`SELECT endpoint, COUNT(*) as count FROM logs GROUP BY endpoint;`
 Response Time Trend:
-SELECT timestamp as time, AVG(response_time) as avg_response FROM logs GROUP BY time ORDER BY time
+`SELECT timestamp as time, AVG(response_time) as avg_response FROM logs GROUP BY time ORDER BY time`
 Most Frequent Errors:
-SELECT error_message, COUNT(*) FROM logs WHERE error_message IS NOT NULL GROUP BY error_message
+`SELECT error_message, COUNT(*) FROM logs WHERE error_message IS NOT NULL GROUP BY error_message`
 Live Logs:
-SELECT timestamp, endpoint, status_code, error_message FROM logs ORDER BY timestamp DESC LIMIT 100
+`SELECT timestamp, endpoint, status_code, error_message FROM logs ORDER BY timestamp DESC LIMIT 100`
 Debugging
 Access the container
 Check the container ID in ‘sudo docker ps’ o/p sudo docker exec -it <container_id> bash
@@ -35,7 +35,7 @@ Check the container ID in ‘sudo docker ps’ o/p sudo docker exec -it <contain
 check process listing using command: ps -aef
 
 Debugging DB Container
-mariadb -u root -p <- provide password as rootpass
+`mariadb -u root -p <- provide password as rootpass`
 
 SHOW DATABASES;
 
