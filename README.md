@@ -21,7 +21,7 @@ Connect to mysql data source with following credentials
  Database: logs`
 Create Grafana dashboards with respective queries
 Request Count Per Endpoint:
-`SELECT endpoint, COUNT(*) as count FROM logs GROUP BY endpoint;`
+<pre><code>```SELECT endpoint, COUNT(*) as count FROM logs GROUP BY endpoint;```</code></pre>
 Response Time Trend:
 `SELECT timestamp as time, AVG(response_time) as avg_response FROM logs GROUP BY time ORDER BY time`
 Most Frequent Errors:
